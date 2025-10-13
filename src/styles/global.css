@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Festival styles (moved from original HTML) */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: "Fira Code", monospace;
+}
+.text-accent {
+  color: #b69bff;
+}
+.bg-accent {
+  background-color: #b69bff;
+}
+
+.terminal-block {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+.command {
+  color: #82eefd;
+}
+.value {
+  color: #e0e0e0;
+}
+.string {
+  color: #a5e075;
+}
+
+/* Efecto de tipeo para "Status" */
+.typing-effect {
+  width: 10ch; /* 'confirmed' tiene 9 caracteres */
+  animation: typing 2s steps(10), blink 0.7s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  display: inline-block;
+  vertical-align: middle;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Animación para "Loading..." */
+.loading-animation {
+  animation: blink-soft 1.5s infinite alternate;
+}
+@keyframes blink-soft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+/* Efecto de resplandor para "NEW RELEASE" */
+.text-glow {
+  text-shadow: 0 0 8px rgba(182, 155, 255, 0.7),
+    0 0 12px rgba(182, 155, 255, 0.5);
+  animation: glow-pulse 2.5s infinite alternate;
+}
+@keyframes glow-pulse {
+  from {
+    text-shadow: 0 0 8px rgba(182, 155, 255, 0.7),
+      0 0 12px rgba(182, 155, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 12px rgba(182, 155, 255, 1),
+      0 0 20px rgba(182, 155, 255, 0.7);
+  }
+}
+
+/* Utility tweaks to match original layout */
+body.min-h-screen {
+  min-height: 100vh;
+}

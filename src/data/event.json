@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "title": "Uleam Tech Fest 2025",
+    "system": "ULEAM v2025",
+    "poweredBy": ["FCVT", "Carrera de Software", "ClubIA"],
+    "location": "Universidad Laica Eloy Alfaro de Manabi (ULEAM)",
+    "city": "Manta, Ecuador"
+  },
+  "status": "confirmed",
+  "schedule": [
+    {
+      "date": "6 Nov.",
+      "description": "Charlas y ponencias del ciclo de construcción de Software"
+    },
+    { "date": "7 Nov.", "description": "Hackathon Universitaria" }
+  ],
+  "speakers": ["Loading..."],
+  "sponsors": ["Loading..."],
+  "cta": {
+    "text": "Inscripciones Próximamente",
+    "href": "#"
+  }
+}

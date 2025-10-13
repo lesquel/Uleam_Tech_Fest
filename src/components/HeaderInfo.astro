@@ -1,0 +1,9 @@
+---
+const { meta, status } = Astro.props;
+---
+
+<div class="text-sm text-gray-400 mb-6">
+  <p>System: {meta.system}</p>
+  <p>Status: <span class="typing-effect">{status}</span></p>
+  <p>Powered-By: {meta.poweredBy.join(", ")}</p>
+</div>

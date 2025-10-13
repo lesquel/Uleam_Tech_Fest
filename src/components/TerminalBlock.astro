@@ -1,0 +1,41 @@
+---
+const { event } = Astro.props;
+---
+
+<div class="terminal-block">
+  <p>
+    <span class="command">&gt; schedule:</span>
+    <span class="value">[[</span>
+  </p>
+  {
+    event.schedule.map((item: any) => (
+      <p class="pl-4">
+        <span class="string">
+          ("{item.date}" {item.description})
+        </span>
+      </p>
+    ))
+  }
+  <p><span class="value">]]</span></p>
+
+  <p>
+    <span class="command">&gt; speakers:</span>
+    <span class="value loading-animation"
+      >{event.speakers.length ? event.speakers.join(", ") : "Loading..."}</span
+    >
+  </p>
+  <p>
+    <span class="command">&gt; sponsors:</span>
+    <span class="value loading-animation"
+      >{event.sponsors.length ? event.sponsors.join(", ") : "Loading..."}</span
+    >
+  </p>
+  <p>
+    <span class="command">&gt; location:</span>
+    <span class="value">{event.meta.location}</span>
+  </p>
+  <p>
+    <span class="command">&gt; city:</span>
+    <span class="value">{event.meta.city}</span>
+  </p>
+</div>
