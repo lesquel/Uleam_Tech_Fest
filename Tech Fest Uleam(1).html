@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REBOOT ULEAM Tech Fest 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #1A1A1A;
+            color: #E0E0E0;
+        }
+        h1 {
+            font-family: 'Fira Code', monospace;
+        }
+        .text-accent { color: #B69BFF; }
+        .bg-accent { background-color: #B69BFF; }
+
+        .terminal-block {
+            background-color: #1E1E1E; padding: 1.5rem; border-radius: 0.5rem;
+            font-size: 0.9em; line-height: 1.8;
+        }
+        .command { color: #82eefd; } /* Cyan for commands */
+        .value { color: #E0E0E0; } /* White/Gray for general values */
+        .string { color: #a5e075; } /* Green for string values */
+        .key { color: #f9c74f; } /* Yellow/Gold for object keys */
+        .comment { color: #6a737d; } /* Gray for comments */
+
+        /* Efecto de tipeo para "Status" */
+        .typing-effect {
+            width: 10ch;
+            animation: typing 2s steps(10), blink .7s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        @keyframes typing { from { width: 0 } }
+        @keyframes blink { 50% { border-color: transparent } }
+
+        /* Animación para "Loading..." */
+        .loading-animation {
+            animation: blink-soft 1.5s infinite alternate;
+        }
+        @keyframes blink-soft {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+
+        /* Efecto de resplandor para "NEW RELEASE" */
+        .text-glow {
+            text-shadow: 0 0 8px rgba(182, 155, 255, 0.7), 0 0 12px rgba(182, 155, 255, 0.5);
+            animation: glow-pulse 2.5s infinite alternate;
+        }
+        @keyframes glow-pulse {
+            from { text-shadow: 0 0 8px rgba(182, 155, 255, 0.7), 0 0 12px rgba(182, 155, 255, 0.5); }
+            to { text-shadow: 0 0 12px rgba(182, 155, 255, 1), 0 0 20px rgba(182, 155, 255, 0.7); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-2xl mx-auto bg-[#1E1E1E] rounded-lg shadow-2xl border border-gray-700 overflow-hidden">
+        <!-- Barra de Título Mejorada -->
+        <div class="h-10 bg-[#333] flex items-center px-4 border-b border-gray-700">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <p class="text-center text-sm text-gray-400 flex-grow">uleam_tech_fest.js</p>
+        </div>
+
+        <div class="p-6 md:p-10">
+            <!-- Header Info Mejorado -->
+            <div class="text-sm comment mb-8">
+                <p>/*</p>
+                <p class="pl-4">* <span class="key">System:</span> <span class="value">ULEAM v2025</span></p>
+                <p class="pl-4">* <span class="key">Status:</span> <span class="string typing-effect">confirmed</span></p>
+                <p class="pl-4">* <span class="key">Powered-By:</span> <span class="value">FCVT, Carrera de Software, ClubIA</span></p>
+                <p>*/</p>
+            </div>
+            
+            <!-- RUN Commands -->
+            <div class="mb-8">
+                <p><span class="command">&gt; RUN /bootcamp()</span></p>
+                <p><span class="command">&gt; RUN /hackathon()</span></p>
+            </div>
+
+            <!-- Title -->
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold text-white">ULEAM TECH FEST 2025</h1>
+                <p class="text-xl md:text-2xl text-accent font-bold tracking-widest mt-3 text-glow">NEW RELEASE</p>
+            </header>
+
+            <!-- Event Details con sintaxis mejorada -->
+            <main>
+                <div class="terminal-block">
+                    <p><span class="command">&gt; schedule:</span> <span class="value">[</span></p>
+                    <p class="pl-4"><span class="value">{</span></p>
+                    <p class="pl-8"><span class="key">"day"</span><span class="value">:</span> <span class="string">"6 Nov"</span><span class="value">,</span></p>
+                    <p class="pl-8"><span class="key">"event"</span><span class="value">:</span> <span class="string">"Ponencias y talleres sobre el ciclo de construcción de Software"</span></p>
+                    <p class="pl-4"><span class="value">},</span></p>
+                    <p class="pl-4"><span class="value">{</span></p>
+                    <p class="pl-8"><span class="key">"day"</span><span class="value">:</span> <span class="string">"7 Nov"</span><span class="value">,</span></p>
+                    <p class="pl-8"><span class="key">"event"</span><span class="value">:</span> <span class="string">"Hackathon Universitaria"</span></p>
+                    <p class="pl-4"><span class="value">}</span></p>
+                    <p><span class="value">],</span></p>
+                    <p><span class="command">&gt; speakers:</span> <span class="value loading-animation">["Loading..."]</span><span class="value">,</span></p>
+                    <p><span class="command">&gt; sponsors:</span> <span class="value loading-animation">["Loading..."]</span><span class="value">,</span></p>
+                    <p><span class="command">&gt; location:</span> <span class="string">"Universidad Laica Eloy Alfaro de Manabi (ULEAM)"</span><span class="value">,</span></p>
+                    <p><span class="command">&gt; city:</span> <span class="string">"Manta, Ecuador"</span></p>
+                </div>
+            </main>
+
+            <!-- CTA Section -->
+            <section class="text-center mt-10">
+                 <a href="#" class="inline-block bg-accent text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-violet-400 transition-colors duration-300 shadow-lg">
+                    Inscripciones Próximamente
+                </a>
+                <p class="comment mt-3 text-sm">// ¡Esperamos tu participación!</p>
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="text-center mt-10 pt-6 border-t border-gray-700 text-gray-400">
+                <p class="mb-2">Sigue el evento en: @softwareuleam - @asofcvt - @club.ia.uleam</p>
+                <p>Universidad Laica Eloy Alfaro de Manabi | FCVT</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -88,3 +88,44 @@ body {
 body.min-h-screen {
   min-height: 100vh;
 }
+
+/* Window title bar */
+.window-bar {
+  height: 2.5rem;
+  background: #333;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.window-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.window-controls .dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+.dot.red {
+  background: #ef4444;
+}
+.dot.yellow {
+  background: #f59e0b;
+}
+.dot.green {
+  background: #10b981;
+}
+
+/* Syntax-like helpers */
+.key {
+  color: #f9c74f;
+}
+.comment {
+  color: #6a737d;
+}
+
+/* Terminal container tweaks */
+.container-card {
+  overflow: hidden;
+}

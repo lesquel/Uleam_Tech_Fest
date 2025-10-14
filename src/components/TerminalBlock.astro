@@ -5,18 +5,38 @@ const { event } = Astro.props;
 <div class="terminal-block">
   <p>
     <span class="command">&gt; schedule:</span>
-    <span class="value">[[</span>
+    <span class="value">[</span>
   </p>
   {
-    event.schedule.map((item: any) => (
-      <p class="pl-4">
-        <span class="string">
-          ("{item.date}" {item.description})
-        </span>
-      </p>
+    event.schedule.map((item: any, idx: number) => (
+      <>
+        <p class="pl-4">
+          <span class="value">{`{`}</span>
+        </p>
+        <p class="pl-8">
+          <>
+            <span class="key">"day"</span>
+            <span class="value">: </span>
+            <span class="string">"{item.date}"</span>
+            <span class="value">,</span>
+          </>
+        </p>
+        <p class="pl-8">
+          <>
+            <span class="key">"event"</span>
+            <span class="value">: </span>
+            <span class="string">"{item.description}"</span>
+          </>
+        </p>
+        <p class="pl-4">
+          <span class="value">
+            {idx < event.schedule.length - 1 ? "}," : "}"}
+          </span>
+        </p>
+      </>
     ))
   }
-  <p><span class="value">]]</span></p>
+  <p><span class="value">],</span></p>
 
   <p>
     <span class="command">&gt; speakers:</span>
