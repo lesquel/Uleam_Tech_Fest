@@ -39,21 +39,42 @@
         try {
           localStorage.setItem(LANG_KEY, lang);
         } catch (e) {}
+        // also update any selectors on the page
+        const sel = document.querySelector("#lang-select");
+        if (sel) sel.value = lang;
       })
       .catch((err) => console.error("i18n load failed", err));
   }
 
-  function initSelector() {
+  // idempotent binder for the language selector
+  function bindSelector() {
     const sel = document.querySelector("#lang-select");
     if (!sel) return;
-    sel.addEventListener("change", (e) => {
+    // replace onchange handler to avoid duplicates
+    sel.onchange = function (e) {
       setLanguage(e.target.value);
+    };
+  }
+
+  // Watch for the selector being re-inserted by ClientRouter navigation
+  let observer;
+  function watchForSelector() {
+    if (observer) return;
+    observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.addedNodes && m.addedNodes.length) {
+          // quick re-bind whenever DOM changes (cheap if debounced)
+          bindSelector();
+        }
+      }
     });
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   // Initialize on DOM ready
   document.addEventListener("DOMContentLoaded", () => {
-    initSelector();
+    bindSelector();
+    watchForSelector();
 
     const saved = (function () {
       try {
@@ -63,9 +84,21 @@
       }
     })();
     const lang = saved || DEFAULT_LANG;
-    setLanguage(lang).then(() => {
-      const sel = document.querySelector("#lang-select");
-      if (sel) sel.value = lang;
-    });
+    setLanguage(lang);
+  });
+
+  // For safety, also bind on page:load-like events used by some routers
+  window.addEventListener("popstate", () => {
+    // re-apply language and re-bind controls after navigation
+    const saved = (function () {
+      try {
+        return localStorage.getItem(LANG_KEY);
+      } catch (e) {
+        return null;
+      }
+    })();
+    const lang = saved || DEFAULT_LANG;
+    setLanguage(lang);
+    bindSelector();
   });
 })();
