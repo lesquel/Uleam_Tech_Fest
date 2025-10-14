@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SpeakerDetail from "../../components/SpeakerDetail.astro";
+import event from "../../data/event.json";
+export async function getStaticPaths() {
+  return event.speakers.map((s) => ({ params: { id: s.id } }));
+}
+
+const { params } = Astro;
+const id = params.id;
+
+const speaker = event.speakers.find((s) => s.id === id);
+if (!speaker) {
+  throw new Error(`Speaker with id ${id} not found`);
+}
+---
+
+<Layout>
+  <SpeakerDetail speaker={speaker} />
+</Layout>

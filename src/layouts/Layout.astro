@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -22,7 +23,27 @@ import "../styles/global.css";
     <!-- Tailwind CDN (development / simple usage) -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="min-h-screen flex items-center justify-center p-4">
-    <slot />
+  <body class="min-h-screen flex items-center justify-center p-4 rounded-t-lg">
+    <div class="w-full max-w-2xl mx-auto container-card">
+      <div class="window-bar" id="app-window-bar">
+        <div class="window-controls">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+        </div>
+        <p class="text-center text-sm text-gray-400 flex-grow">
+          uleam_tech_fest.js
+        </p>
+      </div>
+      <main
+        id="app-content"
+        class="rounded-b-lg shadow-2xl border border-gray-700"
+      >
+        <slot />
+      </main>
+    </div>
+
+    <!-- ClientRouter enables Astro's View Transitions for internal navigation -->
+    <ClientRouter />
   </body>
 </html>

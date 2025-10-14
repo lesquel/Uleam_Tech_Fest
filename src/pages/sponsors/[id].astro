@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SponsorDetail from "../../components/SponsorDetail.astro";
+import event from "../../data/event.json";
+export async function getStaticPaths() {
+  return event.sponsors.map((s) => ({ params: { id: s.id } }));
+}
+
+const { params } = Astro;
+const id = params.id;
+
+const sponsor = event.sponsors.find((s) => s.id === id);
+if (!sponsor) {
+  throw new Error(`Sponsor with id ${id} not found`);
+}
+---
+
+<Layout>
+  <SponsorDetail sponsor={sponsor} />
+</Layout>

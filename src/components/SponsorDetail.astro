@@ -1,0 +1,26 @@
+---
+const { sponsor } = Astro.props;
+---
+
+<article
+  class="w-full max-w-3xl mx-auto bg-[#1E1E1E] rounded-lg shadow-2xl p-6 md:p-10 border border-gray-700"
+>
+  <header class="flex items-center gap-6 mb-6">
+    <img
+      src={sponsor.image}
+      alt={sponsor.name}
+      class="w-20 h-20 rounded-full object-cover"
+    />
+    <div>
+      <h1 class="text-2xl font-bold text-white">{sponsor.name}</h1>
+    </div>
+  </header>
+
+  <section class="prose text-gray-200">
+    <p>{sponsor.description}</p>
+  </section>
+
+  <footer class="mt-6 text-sm text-gray-400">
+    <a href="/" class="text-accent">← Volver</a>
+  </footer>
+</article>

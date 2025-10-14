@@ -137,3 +137,34 @@ body.min-h-screen {
   border-radius: 9999px;
   object-fit: cover;
 }
+
+/* Transition / animation helpers */
+.fade-in {
+  animation: fadeIn 360ms ease-in both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* View Transitions API: name some elements for nicer transitions */
+@supports (view-transition: name) {
+  .container-card,
+  #app-content {
+    view-transition-name: appContent;
+  }
+}
+
+/* Smooth hover / focus microtransitions */
+.hover-smooth {
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.hover-smooth:hover {
+  transform: translateY(-3px);
+}

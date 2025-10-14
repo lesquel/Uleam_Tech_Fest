@@ -3,48 +3,39 @@ import HeaderInfo from "./HeaderInfo.astro";
 import TerminalBlock from "./TerminalBlock.astro";
 import CTA from "./CTA.astro";
 import Footer from "./Footer.astro";
+import { fade } from 'astro:transitions';
 
 const { event } = Astro.props;
 ---
 
-<div
-  class="w-full max-w-2xl mx-auto bg-[#1E1E1E] rounded-lg shadow-2xl border border-gray-700 container-card"
->
-  <div class="window-bar">
-    <div class="window-controls">
-      <div class="dot red"></div>
-      <div class="dot yellow"></div>
-      <div class="dot green"></div>
+<div transition:animate={fade()} class="w-full max-w-2xl mx-auto">
+  <div class="bg-[#1E1E1E]">
+    <div class="p-6 md:p-10">
+      <HeaderInfo meta={event.meta} status={event.status} />
+
+      <div class="mb-8">
+        <p><span class="command">&gt; RUN /bootcamp()</span></p>
+        <p><span class="command">&gt; RUN /hackathon()</span></p>
+      </div>
+
+      <header class="text-center mb-8">
+        <h1 class="text-4xl md:text-6xl font-bold text-white">
+          {event.meta.title}
+        </h1>
+        <p
+          class="text-xl md:text-2xl font-bold tracking-widest mt-3 text-white"
+        >
+          NEW RELEASE
+        </p>
+      </header>
+
+      <main>
+        <TerminalBlock event={event} />
+      </main>
+
+      <CTA cta={event.cta} />
+
+      <Footer meta={event.meta} />
     </div>
-    <p class="text-center text-sm text-gray-400 flex-grow">
-      uleam_tech_fest.js
-    </p>
-  </div>
-  <div class="p-6 md:p-10">
-    <HeaderInfo meta={event.meta} status={event.status} />
-
-    <div class="mb-8">
-      <p><span class="command">&gt; RUN /bootcamp()</span></p>
-      <p><span class="command">&gt; RUN /hackathon()</span></p>
-    </div>
-
-    <header class="text-center mb-8">
-      <h1 class="text-4xl md:text-6xl font-bold text-white">
-        {event.meta.title}
-      </h1>
-      <p
-        class="text-xl md:text-2xl text-accent font-bold tracking-widest mt-3 text-glow"
-      >
-        NEW RELEASE
-      </p>
-    </header>
-
-    <main>
-      <TerminalBlock event={event} />
-    </main>
-
-    <CTA cta={event.cta} />
-
-    <Footer meta={event.meta} />
   </div>
 </div>
