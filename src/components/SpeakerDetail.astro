@@ -1,8 +1,10 @@
 ---
+import { fade } from "astro:transitions";
 const { speaker } = Astro.props;
 ---
 
 <article
+  transition:animate={fade()}
   class="w-full max-w-3xl mx-auto bg-[#1E1E1E] rounded-lg shadow-2xl p-6 md:p-10 border border-gray-700"
 >
   <header class="flex items-center gap-6 mb-6">

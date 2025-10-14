@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -19,9 +19,9 @@ import { ClientRouter } from 'astro:transitions';
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Tailwind CDN (development / simple usage) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ClientRouter enables Astro's View Transitions for internal navigation -->
+    <ClientRouter />
   </head>
   <body class="min-h-screen flex items-center justify-center p-4 rounded-t-lg">
     <div class="w-full max-w-2xl mx-auto container-card">
@@ -43,7 +43,5 @@ import { ClientRouter } from 'astro:transitions';
       </main>
     </div>
 
-    <!-- ClientRouter enables Astro's View Transitions for internal navigation -->
-    <ClientRouter />
   </body>
 </html>
