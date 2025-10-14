@@ -46,35 +46,19 @@
       .catch((err) => console.error("i18n load failed", err));
   }
 
-  // idempotent binder for the language selector
-  function bindSelector() {
-    const sel = document.querySelector("#lang-select");
-    if (!sel) return;
-    // replace onchange handler to avoid duplicates
-    sel.onchange = function (e) {
-      setLanguage(e.target.value);
-    };
-  }
-
-  // Watch for the selector being re-inserted by ClientRouter navigation
-  let observer;
-  function watchForSelector() {
-    if (observer) return;
-    observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (m.addedNodes && m.addedNodes.length) {
-          // quick re-bind whenever DOM changes (cheap if debounced)
-          bindSelector();
-        }
-      }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+  // Delegated handler: listen for changes to any #lang-select on the document.
+  function delegatedChangeHandler(e) {
+    const target = e.target;
+    if (!target) return;
+    // if the change came from the select we care about
+    if (target.id === "lang-select") {
+      setLanguage(target.value);
+    }
   }
 
   // Initialize on DOM ready
   document.addEventListener("DOMContentLoaded", () => {
-    bindSelector();
-    watchForSelector();
+    document.addEventListener("change", delegatedChangeHandler);
 
     const saved = (function () {
       try {
@@ -87,9 +71,8 @@
     setLanguage(lang);
   });
 
-  // For safety, also bind on page:load-like events used by some routers
+  // Also re-apply language after navigation events; ClientRouter uses pushState
   window.addEventListener("popstate", () => {
-    // re-apply language and re-bind controls after navigation
     const saved = (function () {
       try {
         return localStorage.getItem(LANG_KEY);
@@ -99,6 +82,5 @@
     })();
     const lang = saved || DEFAULT_LANG;
     setLanguage(lang);
-    bindSelector();
   });
 })();

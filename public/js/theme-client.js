@@ -1,31 +1,14 @@
-(function () {
+(() => {
   const KEY = "uf_theme";
-  const DEFAULT = "dark"; // default is dark
+  const DEFAULT = "dark";
 
   function applyTheme(theme) {
     const root = document.documentElement;
-    if (theme === "light") {
-      root.classList.add("light-theme");
-    } else {
-      root.classList.remove("light-theme");
-    }
+    if (theme === "light") root.classList.add("light-theme");
+    else root.classList.remove("light-theme");
     try {
       localStorage.setItem(KEY, theme);
     } catch (e) {}
-  }
-
-  function bindToggle() {
-    const btn = document.querySelector("#theme-toggle");
-    if (!btn) return;
-    // idempotent binding
-    btn.onclick = function () {
-      const current = document.documentElement.classList.contains("light-theme")
-        ? "light"
-        : "dark";
-      const next = current === "light" ? "dark" : "light";
-      applyTheme(next);
-      updateButton(next);
-    };
   }
 
   function updateButton(theme) {
@@ -35,16 +18,21 @@
     btn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
   }
 
-  let observer;
-  function watchForToggle() {
-    if (observer) return;
-    observer = new MutationObserver(() => {
-      bindToggle();
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+  function delegatedClick(e) {
+    const t = e.target;
+    if (!t) return;
+    if (t.id === "theme-toggle") {
+      const current = document.documentElement.classList.contains("light-theme")
+        ? "light"
+        : "dark";
+      const next = current === "light" ? "dark" : "light";
+      applyTheme(next);
+      updateButton(next);
+    }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function init() {
+    document.addEventListener("click", delegatedClick);
     const saved = (function () {
       try {
         return localStorage.getItem(KEY);
@@ -55,21 +43,21 @@
     const theme = saved || DEFAULT;
     applyTheme(theme);
     updateButton(theme);
-    bindToggle();
-    watchForToggle();
-  });
+    window.addEventListener("popstate", () => {
+      const saved2 = (function () {
+        try {
+          return localStorage.getItem(KEY);
+        } catch (e) {
+          return null;
+        }
+      })();
+      const theme2 = saved2 || DEFAULT;
+      applyTheme(theme2);
+      updateButton(theme2);
+    });
+  }
 
-  window.addEventListener("popstate", () => {
-    const saved = (function () {
-      try {
-        return localStorage.getItem(KEY);
-      } catch (e) {
-        return null;
-      }
-    })();
-    const theme = saved || DEFAULT;
-    applyTheme(theme);
-    updateButton(theme);
-    bindToggle();
-  });
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();
