@@ -129,3 +129,11 @@ body.min-h-screen {
 .container-card {
   overflow: hidden;
 }
+
+/* Avatar tweaks for small thumbnails */
+.avatar-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}

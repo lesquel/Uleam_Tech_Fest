@@ -1,0 +1,27 @@
+---
+const { sponsors } = Astro.props;
+---
+
+{
+  sponsors && sponsors.length ? (
+    <div class="mt-4">
+      <div class="flex flex-wrap gap-3 items-center">
+        {sponsors.map((sp: any) => (
+          <a
+            href={sp.link ?? sp.image ?? "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-3 p-1 rounded-md hover:opacity-90"
+          >
+            <img
+              src={sp.image}
+              alt={sp.name}
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="text-sm text-white">{sp.name}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  ) : null
+}

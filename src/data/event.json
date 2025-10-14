@@ -14,8 +14,23 @@
     },
     { "date": "7 Nov.", "description": "Hackathon Universitaria" }
   ],
-  "speakers": ["Loading..."],
-  "sponsors": ["Loading..."],
+  "speakers": [
+    {
+      "name": "Leopoldo Miquel Muñiz Rivas",
+      "title": "Director de Tecnología",
+      "company": "FCVT",
+      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
+      "titleOfPresentation": "Introducción a la programación con Go",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Asofcvt",
+      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  ],
   "cta": {
     "text": "Inscripciones Próximamente",
     "href": "#"

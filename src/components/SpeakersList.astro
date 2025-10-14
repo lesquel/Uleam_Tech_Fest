@@ -1,0 +1,27 @@
+---
+const { speakers } = Astro.props;
+---
+
+{
+  speakers && speakers.length ? (
+    <div class="mt-4">
+      <div class="flex flex-wrap gap-3">
+        {speakers.map((s: any) => (
+          <a
+            href={s.link ?? s.image ?? "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-3 p-1 rounded-md hover:opacity-90"
+          >
+            <img
+              src={s.image}
+              alt={s.name}
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="text-sm text-white font-medium">{s.name}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  ) : null
+}
