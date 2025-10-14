@@ -1,10 +1,9 @@
 ---
-const { meta } = Astro.props;
+const { meta = {} } = Astro.props;
 ---
-
-<footer class="text-center mt-10 pt-6 border-t border-gray-700 text-gray-400">
-  <p class="mb-2">
+<footer class="text-center mt-10 pt-6 border-t surface-border text-muted">
+  <p class="mb-2" data-i18n-key="footer.follow">
     Sigue el evento en: @softwareuleam - @asofcvt - @club.ia.uleam
   </p>
-  <p>Universidad Laica Eloy Alfaro de Manabi | FCVT</p>
+  <p data-i18n-key="footer.university">Universidad Laica Eloy Alfaro de Manabi | FCVT</p>
 </footer>

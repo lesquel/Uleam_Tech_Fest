@@ -1,0 +1,22 @@
+{
+  "meta.title": "Uleam Tech Fest",
+  "header.system": "System",
+  "header.status": "Status",
+  "header.poweredBy": "Powered-By",
+  "hero.runBootcamp": "> RUN /bootcamp()",
+  "hero.runHackathon": "> RUN /hackathon()",
+  "hero.newRelease": "NEW RELEASE",
+  "schedule.label": "> schedule:",
+  "speakers.label": "> speakers:",
+  "sponsors.label": "> sponsors:",
+  "location.label": "> location:",
+  "city.label": "> city:",
+  "cta.join": "Join now",
+  "cta.subtext": "We look forward to your participation!",
+  "footer.follow": "Follow the event at: @softwareuleam - @asofcvt - @club.ia.uleam",
+  "footer.university": "Laica Eloy Alfaro University of Manabi | FCVT",
+  "back": "← Back",
+  "window.title": "uleam_tech_fest.js",
+  "language.english": "EN",
+  "language.spanish": "ES"
+}

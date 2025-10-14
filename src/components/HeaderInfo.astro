@@ -5,15 +5,15 @@ const { meta, status } = Astro.props;
 <div class="text-sm comment mb-8">
   <p>/*</p>
   <p class="pl-4">
-    * <span class="key">System:</span>
+    * <span class="key" data-i18n-key="header.system">System:</span>
     <span class="value">{meta.system}</span>
   </p>
   <p class="pl-4">
-    * <span class="key">Status:</span>
+    * <span class="key" data-i18n-key="header.status">Status:</span>
     <span class="string typing-effect">{status}</span>
   </p>
   <p class="pl-4">
-    * <span class="key">Powered-By:</span>
+    * <span class="key" data-i18n-key="header.poweredBy">Powered-By:</span>
     <span class="value">{meta.poweredBy.join(", ")}</span>
   </p>
   <p>*/</p>

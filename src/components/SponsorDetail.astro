@@ -5,7 +5,7 @@ const { sponsor } = Astro.props;
 
 <article
   transition:animate={fade()}
-  class="w-full max-w-3xl mx-auto bg-[#1E1E1E] rounded-lg shadow-2xl p-6 md:p-10 border border-gray-700"
+  class="w-full max-w-3xl mx-auto bg-surface rounded-lg shadow-2xl p-6 md:p-10 surface-border"
 >
   <header class="flex items-center gap-6 mb-6">
     <img
@@ -14,7 +14,7 @@ const { sponsor } = Astro.props;
       class="w-20 h-20 rounded-full object-cover"
     />
     <div>
-      <h1 class="text-2xl font-bold text-white">{sponsor.name}</h1>
+  <h1 class="text-2xl font-bold text-primary">{sponsor.name}</h1>
     </div>
   </header>
 
@@ -22,7 +22,7 @@ const { sponsor } = Astro.props;
     <p>{sponsor.description}</p>
   </section>
 
-  <footer class="mt-6 text-sm text-gray-400">
-    <a href="/" class="text-accent">← Volver</a>
+  <footer class="mt-6 text-sm text-muted">
+    <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>
   </footer>
 </article>

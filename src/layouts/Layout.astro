@@ -4,13 +4,13 @@ import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Uleam Tech Fest</title>
+    <title data-i18n-key="meta.title">Uleam Tech Fest</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@ import { ClientRouter } from "astro:transitions";
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    
+
     <!-- ClientRouter enables Astro's View Transitions for internal navigation -->
     <ClientRouter />
   </head>
@@ -31,17 +31,33 @@ import { ClientRouter } from "astro:transitions";
           <div class="dot yellow"></div>
           <div class="dot green"></div>
         </div>
-        <p class="text-center text-sm text-gray-400 flex-grow">
+        <p
+          class="text-center text-sm text-muted flex-grow"
+          data-i18n-key="window.title"
+        >
           uleam_tech_fest.js
         </p>
+        <div class="ml-2">
+          <select
+            id="lang-select"
+            aria-label="Language selector"
+            class="bg-transparent text-sm text-muted"
+          >
+            <option value="en" data-i18n-key="language.english">EN</option>
+            <option value="es" data-i18n-key="language.spanish">ES</option>
+          </select>
+          <button
+            id="theme-toggle"
+            aria-label="Toggle theme"
+            class="ml-2 px-2 py-1 text-sm">🌙</button
+          >
+        </div>
       </div>
-      <main
-        id="app-content"
-        class="rounded-b-lg shadow-2xl border border-gray-700"
-      >
+      <main id="app-content" class="rounded-b-lg shadow-2xl surface-border">
         <slot />
       </main>
     </div>
-
+    <script src="/js/i18n-client.js" is:inline></script>
+    <script src="/js/theme-client.js" is:inline></script>
   </body>
 </html>

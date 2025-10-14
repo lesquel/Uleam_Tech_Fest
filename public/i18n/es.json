@@ -1,0 +1,22 @@
+{
+  "meta.title": "Uleam Tech Fest",
+  "header.system": "Sistema",
+  "header.status": "Estado",
+  "header.poweredBy": "Desarrollado por",
+  "hero.runBootcamp": "> INICIAR /bootcamp()",
+  "hero.runHackathon": "> INICIAR /hackathon()",
+  "hero.newRelease": "NUEVO LANZAMIENTO",
+  "schedule.label": "> agenda:",
+  "speakers.label": "> ponentes:",
+  "sponsors.label": "> patrocinadores:",
+  "location.label": "> ubicación:",
+  "city.label": "> ciudad:",
+  "cta.join": "Únete ahora",
+  "cta.subtext": "¡Esperamos tu participación!",
+  "footer.follow": "Sigue el evento en: @softwareuleam - @asofcvt - @club.ia.uleam",
+  "footer.university": "Universidad Laica Eloy Alfaro de Manabí | FCVT",
+  "back": "← Volver",
+  "window.title": "uleam_tech_fest.js",
+  "language.english": "EN",
+  "language.spanish": "ES"
+}
