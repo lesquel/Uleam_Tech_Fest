@@ -5,6 +5,8 @@
   "header.poweredBy": "Powered-By",
   "hero.runBootcamp": "> RUN /bootcamp()",
   "hero.runHackathon": "> RUN /hackathon()",
+  "hero.bootcampComment": "// More bootcamp information",
+  "hero.hackathonComment": "// Learn hackathon details",
   "hero.newRelease": "NEW RELEASE",
   "schedule.label": "> schedule:",
   "speakers.label": "> speakers:",

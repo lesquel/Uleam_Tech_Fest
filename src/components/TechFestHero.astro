@@ -13,19 +13,6 @@ const { event } = Astro.props;
     <div class="p-6 md:p-10">
       <HeaderInfo meta={event.meta} status={event.status} />
 
-      <div class="mb-8">
-        <p>
-          <span class="command" data-i18n-key="hero.runBootcamp"
-            >&gt; RUN /bootcamp()</span
-          >
-        </p>
-        <p>
-          <span class="command" data-i18n-key="hero.runHackathon"
-            >&gt; RUN /hackathon()</span
-          >
-        </p>
-      </div>
-
       <header class="text-center mb-8">
         <h1 class="text-4xl md:text-6xl font-bold text-primary">
           {event.meta.title}
@@ -37,6 +24,33 @@ const { event } = Astro.props;
           NEW RELEASE
         </p>
       </header>
+
+      <div class="mb-0 space-y-4">
+        <div>
+          <p class="comment text-sm mb-1" data-i18n-key="hero.bootcampComment">// Más información del bootcamp</p>
+          <p>
+            <a 
+              href="/bootcamp" 
+              class="command-link" 
+              data-i18n-key="hero.runBootcamp"
+            >
+              &gt; INICIAR /bootcamp()
+            </a>
+          </p>
+        </div>
+        <div>
+          <p class="comment text-sm mb-1" data-i18n-key="hero.hackathonComment">// Conoce los detalles de la hackathon</p>
+          <p>
+            <a 
+              href="/hackathon" 
+              class="command-link" 
+              data-i18n-key="hero.runHackathon"
+            >
+              &gt; INICIAR /hackathon()
+            </a>
+          </p>
+        </div>
+      </div>
 
       <main>
         <TerminalBlock event={event} />

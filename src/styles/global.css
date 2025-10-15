@@ -13,11 +13,11 @@
 
 /* Light theme override */
 .light-theme {
-  --bg: #ffffff;
-  --surface: #f7f7f8;
-  --text: #0f172a; /* dark text */
-  --muted: #6b7280;
-  --border: rgba(15, 23, 42, 0.06);
+  --bg: #fafafa; /* más suave que blanco puro */
+  --surface: #f1f5f9; /* un gris muy claro con tinte azul */
+  --text: #1e293b; /* texto un poco más suave que negro */
+  --muted: #64748b; /* gris más suave */
+  --border: rgba(30, 41, 59, 0.08); /* bordes más suaves */
   --accent: #7c3aed; /* slightly darker accent for light */
   --accent-text: #ffffff;
 }
@@ -70,6 +70,27 @@ body {
 }
 .command {
   color: #82eefd;
+}
+.command-link {
+  color: #82eefd;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+.command-link:hover {
+  color: #ffffff;
+  background-color: rgba(130, 238, 253, 0.1);
+  text-shadow: 0 0 8px rgba(130, 238, 253, 0.6);
+  transform: translateY(-1px);
+}
+.command-link:active {
+  transform: translateY(0);
 }
 .value {
   color: var(--text);

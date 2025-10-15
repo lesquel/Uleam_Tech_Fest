@@ -43,21 +43,29 @@
     const theme = saved || DEFAULT;
     applyTheme(theme);
     updateButton(theme);
-    window.addEventListener("popstate", () => {
-      const saved2 = (function () {
-        try {
-          return localStorage.getItem(KEY);
-        } catch (e) {
-          return null;
-        }
-      })();
-      const theme2 = saved2 || DEFAULT;
-      applyTheme(theme2);
-      updateButton(theme2);
-    });
   }
 
+  function handleNavigation() {
+    const saved = (function () {
+      try {
+        return localStorage.getItem(KEY);
+      } catch (e) {
+        return null;
+      }
+    })();
+    const theme = saved || DEFAULT;
+    applyTheme(theme);
+    updateButton(theme);
+  }
+
+  // Initialize on DOM ready
   if (document.readyState === "loading")
     document.addEventListener("DOMContentLoaded", init);
   else init();
+
+  // Handle Astro View Transitions
+  document.addEventListener("astro:page-load", handleNavigation);
+  
+  // Handle browser navigation
+  window.addEventListener("popstate", handleNavigation);
 })();
