@@ -5,7 +5,7 @@ const { event } = Astro.props;
 ---
 
 <div class="terminal-block">
-  <p>
+  <!-- <p>
     <span class="command" data-i18n-key="schedule.label">&gt; schedule:</span>
     <span class="value">[</span>
   </p>
@@ -46,21 +46,8 @@ const { event } = Astro.props;
       </>
     ))
   }
-  <p><span class="value">],</span></p>
+  <p><span class="value">],</span></p> -->
 
-  <p>
-    <span class="command" data-i18n-key="speakers.label">&gt; speakers:</span>
-  </p>
-  <div class="pl-4">
-    <SpeakersList speakers={event.speakers} />
-  </div>
-
-  <p class="mt-3">
-    <span class="command" data-i18n-key="sponsors.label">&gt; sponsors:</span>
-  </p>
-  <div class="pl-4">
-    <SponsorsList sponsors={event.sponsors} />
-  </div>
   <p class="mt-4">
     <span class="command" data-i18n-key="location.label">&gt; location:</span>
     <span class="value">{event.meta.location}</span>
