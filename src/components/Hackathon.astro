@@ -11,35 +11,45 @@ const { hackathon, event } = Astro.props;
       <HeaderInfo meta={event.meta} status={event.status} />
 
       <header class="text-center mb-6">
-        <h1 class="text-3xl md:text-4xl font-bold text-primary">{hackathon?.title}</h1>
-        {hackathon?.subtitle ? (
-          <p class="text-accent font-semibold mt-2">{hackathon.subtitle}</p>
-        ) : null}
+        <h1 class="text-3xl md:text-4xl font-bold text-primary">
+          {hackathon?.title}
+        </h1>
+        {
+          hackathon?.subtitle ? (
+            <p class="text-accent font-semibold mt-2">{hackathon.subtitle}</p>
+          ) : null
+        }
       </header>
 
       <section class="prose text-primary mb-4">
         <p>{hackathon?.description}</p>
-        {hackathon?.details ? (
-          <div class="mt-4">
-            <h3 class="text-accent font-semibold mb-2">Detalles del evento</h3>
-            <ul>
-              {hackathon.details.map((d: any) => (
-                <li>{d}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        {
+          hackathon?.details ? (
+            <div class="mt-4">
+              <h3 class="text-accent font-semibold mb-2">
+                Detalles del evento
+              </h3>
+              <ul>
+                {hackathon.details.map((d: any) => (
+                  <li>{d}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
 
-        {hackathon?.prizes ? (
-          <div class="mt-4">
-            <h3 class="text-accent font-semibold mb-2">Premios</h3>
-            <ul>
-              {hackathon.prizes.map((p: any) => (
-                <li>{p}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        {
+          hackathon?.prizes ? (
+            <div class="mt-4">
+              <h3 class="text-accent font-semibold mb-2">Premios</h3>
+              <ul>
+                {hackathon.prizes.map((p: any) => (
+                  <li>{p}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
       </section>
 
       <main>
