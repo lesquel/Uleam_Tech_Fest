@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Bootcamp from "../components/Bootcamp.astro";
+import BootcampUI from "../components/Bootcamp.astro";
 import event from "../data/event.json";
 ---
 
 <Layout>
   <div class="max-w-2xl mx-auto p-6">
-    <Bootcamp bootcamp={event.bootcamp} event={event} />
+  <BootcampUI bootcamp={event.bootcamp} event={event} />
   </div>
 </Layout>
