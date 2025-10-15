@@ -15,14 +15,14 @@ const { speaker } = Astro.props;
     />
     <div>
       <h1 class="text-2xl font-bold text-primary">{speaker.name}</h1>
-      <p class="text-muted">{speaker.title} — {speaker.company}</p>
+      <p class="text-muted">{speaker.title} — {speaker.email}</p>
       <p class="text-accent font-semibold mt-2">
         {speaker.titleOfPresentation}
       </p>
     </div>
   </header>
 
-  <section class="prose text-gray-200">
+  <section class="prose text-primary">
     <p>{speaker.description}</p>
   </section>
 

@@ -17,9 +17,36 @@
   "speakers": [
     {
       "id": "1",
-      "name": "Leopoldo Miquel Muñiz Rivas",
-      "title": "Director de Tecnología",
-      "company": "FCVT",
+      "name": "Ing. Riden Cedeño Salavarría",
+      "title": "CEO ZGAMES",
+      "email": "ridencedeno@zgames.tech",
+      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
+      "titleOfPresentation": "Introducción a la programación con Go",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "2",
+      "name": "Ing. Elizabeth Rodriguez Zambrano",
+      "title": "Project Manager ZGAMES",
+      "email": "elizabethrodriguez@zgames.tech",
+      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
+      "titleOfPresentation": "Introducción a la programación con Go",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "3",
+      "name": "Ing. Jose Mendoza Muñoz",
+      "title": "Gerente de TICs en TECOPESCA",
+      "email": "jmendoza@tecopesca.com",
+      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
+      "titleOfPresentation": "Introducción a la programación con Go",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "4",
+      "name": "Ing. Marcelo Saldarriaga Carrillo",
+      "title": "Gerente RunachayEcuador S.A.",
+      "email": "marcelo.saldarriaga@runachay.com",
       "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
       "titleOfPresentation": "Introducción a la programación con Go",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -28,9 +55,15 @@
   "sponsors": [
     {
       "id": "1",
-      "name": "Asofcvt",
-      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "name": "cursor",
+      "image": "https://luismendoza.sfo2.cdn.digitaloceanspaces.com/blog/posts/cursor-linux/cursor.png",
+      "description": "Cursor: herramienta y comunidad para desarrolladores, enfocada en productividad y colaboración en entornos de desarrollo modernos."
+    },
+    {
+      "id": "2",
+      "name": "Supabase",
+      "image": "https://yt3.googleusercontent.com/KVjptxDSWT7rjVfGax2TgTNVAYgplgo1z_fwaV3MFjPpcmNVZC0TIgQV030BPJ0ybCP3_Fz-2w=s900-c-k-c0x00ffffff-no-rj",
+      "description": "Supabase: plataforma open-source para bases de datos y autenticación, que facilita construir aplicaciones escalables rápidamente."
     }
   ],
   "cta": {
