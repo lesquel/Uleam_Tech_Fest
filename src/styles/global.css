@@ -234,3 +234,161 @@ body.min-h-screen {
 .hover-smooth:hover {
   transform: translateY(-3px);
 }
+
+/* New layout utilities for Bootcamp/Hackathon redesign */
+.experience-shell {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.panel {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.01),
+    transparent 40%
+  );
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+.hero-panel {
+  padding: 1.5rem;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem;
+  align-items: start;
+}
+.hero-left .micro-badge {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    color-mix(in srgb, var(--accent) 60%, transparent)
+  );
+  color: var(--accent-text);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.hero-title {
+  font-size: 1.6rem;
+  margin: 0.25rem 0;
+  color: var(--text);
+}
+.hero-subtitle {
+  color: var(--accent);
+  font-weight: 600;
+}
+.lead {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+.hero-right .card.small {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+.card-title {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.quick-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.quick-facts .fact {
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed var(--border);
+  color: var(--muted);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.flow-step {
+  padding: 1rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.01), transparent);
+  border: 1px solid var(--border);
+}
+.flow-index {
+  display: inline-block;
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--accent);
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.pillar-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+  border: 1px solid var(--border);
+}
+
+.showcase-block {
+  margin-top: 0.5rem;
+}
+
+.cta-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cta-button {
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 70%, transparent)
+  );
+  color: var(--accent-text);
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.page-footer {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+.back-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+@media (max-width: 820px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .flow-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+}
