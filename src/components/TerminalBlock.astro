@@ -17,6 +17,14 @@ const { event } = Astro.props;
         </p>
         <p class="pl-8">
           <>
+            <span class="key">"event"</span>
+            <span class="value">: </span>
+            <span class="string">"{item.event}"</span>
+            <span class="value">,</span>
+          </>
+        </p>
+        <p class="pl-8">
+          <>
             <span class="key">"day"</span>
             <span class="value">: </span>
             <span class="string">"{item.date}"</span>
@@ -25,7 +33,7 @@ const { event } = Astro.props;
         </p>
         <p class="pl-8">
           <>
-            <span class="key">"event"</span>
+            <span class="key">"detail"</span>
             <span class="value">: </span>
             <span class="string">"{item.description}"</span>
           </>
@@ -53,7 +61,7 @@ const { event } = Astro.props;
   <div class="pl-4">
     <SponsorsList sponsors={event.sponsors} />
   </div>
-  <p>
+  <p class="mt-4">
     <span class="command" data-i18n-key="location.label">&gt; location:</span>
     <span class="value">{event.meta.location}</span>
   </p>

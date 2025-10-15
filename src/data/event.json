@@ -10,9 +10,14 @@
   "schedule": [
     {
       "date": "6 Nov.",
+      "event": "Bootcamp",
       "description": "Charlas y ponencias del ciclo de construcción de Software"
     },
-    { "date": "7 Nov.", "description": "Hackathon Universitaria" }
+    {
+      "date": "7 Nov.", 
+      "event": "Hackathon",
+      "description": "Hackathon Universitaria"
+    }
   ],
   "speakers": [
     {
@@ -55,7 +60,7 @@
   "sponsors": [
     {
       "id": "1",
-      "name": "cursor",
+      "name": "Cursor",
       "image": "https://luismendoza.sfo2.cdn.digitaloceanspaces.com/blog/posts/cursor-linux/cursor.png",
       "description": "Cursor: herramienta y comunidad para desarrolladores, enfocada en productividad y colaboración en entornos de desarrollo modernos."
     },
@@ -64,10 +69,38 @@
       "name": "Supabase",
       "image": "https://yt3.googleusercontent.com/KVjptxDSWT7rjVfGax2TgTNVAYgplgo1z_fwaV3MFjPpcmNVZC0TIgQV030BPJ0ybCP3_Fz-2w=s900-c-k-c0x00ffffff-no-rj",
       "description": "Supabase: plataforma open-source para bases de datos y autenticación, que facilita construir aplicaciones escalables rápidamente."
+    },
+    {
+      "id": "3",
+      "name": "ZGames",
+      "image": "https://media.licdn.com/dms/image/v2/D4D0BAQGlL3K__sQPDw/company-logo_200_200/company-logo_200_200/0/1694616709541/zgameslatam_logo?e=1763596800&v=beta&t=2jfwUkqf9MA4Rrs1Wp2eQsjjSeRBe9d4r9LpBnCmwpg",
+      "description": "ZGames: Nuestra innovadora plataforma ha sido meticulosamente desarrollada para simplificar y potenciar el éxito en el negocio de las apuestas deportivas. Brindamos todas las herramientas esenciales para el éxito de las apuestas deportivas."
     }
   ],
   "cta": {
-    "text": "Inscripciones Próximamente",
-    "href": "#"
+    "text": "Inscríbete Ahora",
+    "href": "https://luma.com/51i82pkw"
+  }
+  ,
+  "bootcamp": {
+    "title": "Bootcamp: Todo lo necesario para el Desarrollo",
+    "subtitle": "Un día intensivo para aprender a construir aplicaciones",
+    "description": "Un bootcamp práctico dirigido a estudiantes y profesionales que quieren fortalecer sus habilidades en desarrollo web y cloud.",
+    "details": [
+      "Fecha: 6 Nov.",
+      "Formato: Presencial",
+      "Temas: Requisitos, diseño, desarrollo, despliegue"
+    ]
+  },
+  "hackathon": {
+    "title": "Hackathon Universitaria",
+    "subtitle": "Hora de poner en práctica lo aprendido, un día para crear, prototipar y competir.",
+    "description": "Equipos de estudiantes desarrollarán soluciones innovadoras a retos propuestos por empresas y la universidad.",
+    "details": [
+      "Fecha: 7 Nov.",
+      "Formato: Presencial",
+      "Duración: 24 horas"
+    ],
+    "prizes": ["1er Lugar: pending", "2do Lugar: pending", "3er Lugar: pending"]
   }
 }

@@ -1,5 +1,8 @@
 (function () {
-  const DEFAULT_LANG = "en";
+  // Detectar idioma del navegador automáticamente
+  const browserLang = navigator.language.slice(0, 2); // 'en', 'es', etc.
+  const SUPPORTED_LANGS = ['es', 'en'];
+  const DEFAULT_LANG = SUPPORTED_LANGS.includes(browserLang) ? browserLang : "es";
   const LANG_KEY = "uf_lang";
 
   async function loadJson(path) {
@@ -57,7 +60,12 @@
   }
 
   // Initialize on DOM ready
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", initializeI18n);
+  
+  // Handle Astro View Transitions
+  document.addEventListener("astro:page-load", initializeI18n);
+
+  function initializeI18n() {
     document.addEventListener("change", delegatedChangeHandler);
 
     const saved = (function () {
@@ -69,7 +77,7 @@
     })();
     const lang = saved || DEFAULT_LANG;
     setLanguage(lang);
-  });
+  }
 
   // Also re-apply language after navigation events; ClientRouter uses pushState
   window.addEventListener("popstate", () => {

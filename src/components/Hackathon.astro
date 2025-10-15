@@ -1,0 +1,46 @@
+---
+import { fade } from "astro:transitions";
+const { hackathon } = Astro.props;
+---
+
+<article
+  transition:animate={fade()}
+  class="w-full max-w-3xl mx-auto bg-surface rounded-lg shadow-2xl p-6 md:p-10 surface-border"
+>
+  <header class="mb-6">
+    <div>
+      <h1 class="text-2xl font-bold text-primary">{hackathon?.title}</h1>
+      {hackathon?.subtitle ? (
+        <p class="text-accent font-semibold mt-2">{hackathon.subtitle}</p>
+      ) : null}
+    </div>
+  </header>
+
+  <section class="prose text-primary">
+    <p>{hackathon?.description}</p>
+    {hackathon?.details ? (
+      <div class="mt-4">
+        <h3 class="text-accent font-semibold mb-2">Detalles del evento</h3>
+        <ul>
+          {hackathon.details.map((d) => (
+            <li>{d}</li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
+    {hackathon?.prizes ? (
+      <div class="mt-4">
+        <h3 class="text-accent font-semibold mb-2">Premios</h3>
+        <ul>
+          {hackathon.prizes.map((p) => (
+            <li>{p}</li>
+          ))}
+        </ul>
+      </div>
+    ) : null}
+  </section>
+
+  <footer class="mt-6 text-sm text-muted">
+    <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>
+  </footer>
+</article>
