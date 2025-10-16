@@ -14,7 +14,7 @@ const { sponsors } = Astro.props;
             <img
               src={sp.image}
               alt={sp.name}
-              class="w-10 h-10 rounded-full object-cover"
+              class={`w-10 h-10 rounded-full ${sp.name === 'Point Institute' ? 'object-contain bg-white/10 p-1.5' : 'object-cover'}`}
             />
             <div class="text-sm text-primary">{sp.name}</div>
           </a>

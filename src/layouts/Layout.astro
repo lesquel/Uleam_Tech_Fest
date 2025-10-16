@@ -1,6 +1,12 @@
 ---
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
+
+interface Props {
+  filename?: string;
+}
+
+const { filename = "uleam_tech_fest.js" } = Astro.props;
 ---
 
 <!doctype html>
@@ -35,7 +41,7 @@ import { ClientRouter } from "astro:transitions";
           class="text-center text-sm text-muted flex-grow"
           data-i18n-key="window.title"
         >
-          uleam_tech_fest.js
+          {filename}
         </p>
         <div class="ml-2">
           <select

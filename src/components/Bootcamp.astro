@@ -1,5 +1,4 @@
 ---
-import HeaderInfo from "./HeaderInfo.astro";
 import TerminalBlock from "./TerminalBlock.astro";
 import SpeakersList from "./SpeakersList.astro";
 import { fade } from "astro:transitions";
@@ -15,8 +14,6 @@ const { bootcamp, event } = Astro.props;
 <div transition:animate={fade()} class="w-full max-w-2xl mx-auto">
   <div class="bg-surface">
     <div class="p-6 md:p-10">
-      <HeaderInfo meta={event.meta} status={event.status} />
-
       <header class="text-center mb-6">
         <h1 class="text-3xl md:text-4xl font-bold text-primary">
           {bootcamp?.title}
@@ -49,17 +46,13 @@ const { bootcamp, event } = Astro.props;
       <div class="mb-4">
         <p>
           <span class="command" data-i18n-key="speakers.label"
-            >&gt; speakers:</span
+            >&gt; ponentes:</span
           >
         </p>
         <div class="pl-4">
           <SpeakersList speakers={event.speakers} />
         </div>
       </div>
-
-      <main>
-        <TerminalBlock event={event} />
-      </main>
 
       <footer class="mt-6 text-sm text-muted">
         <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>
