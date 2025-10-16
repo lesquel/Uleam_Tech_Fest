@@ -23,38 +23,38 @@
     {
       "id": "1",
       "name": "Ing. Riden Cedeño Salavarría",
-      "title": "CEO ZGAMES",
+      "title": "CTO ZGAMES",
       "email": "ridencedeno@zgames.tech",
-      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
-      "titleOfPresentation": "Introducción a la programación con Go",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
+      "image": "https://media.licdn.com/dms/image/v2/C5603AQHkeHsfIMpxJQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1565817432265?e=1762387200&v=beta&t=Z_akMaCJfWCuy2nsoNMbtxPjkOfC4Cj7F9cpLsAxv_Y",
+      "titleOfPresentation": "Pending update...",
+      "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
+},
     {
       "id": "2",
       "name": "Ing. Elizabeth Rodriguez Zambrano",
       "title": "Project Manager ZGAMES",
       "email": "elizabethrodriguez@zgames.tech",
-      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
-      "titleOfPresentation": "Introducción a la programación con Go",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
+      "image": "https://media.licdn.com/dms/image/v2/D4D03AQEWjzhC95r66g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694198429781?e=1762387200&v=beta&t=EizROeasx-X8vOLtYbPfUZTxS3mqasecUjswdmfosio",
+      "titleOfPresentation": "Pending update...",
+      "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
+   },
     {
       "id": "3",
       "name": "Ing. Jose Mendoza Muñoz",
       "title": "Gerente de TICs en TECOPESCA",
       "email": "jmendoza@tecopesca.com",
-      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
-      "titleOfPresentation": "Introducción a la programación con Go",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
+      "image": "https://media.licdn.com/dms/image/v2/C5603AQFDik0EQpLtiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516930829921?e=1762387200&v=beta&t=mxJkLuqSewKdMunJZX39OR7_oA5Pyt9RPCYpwj82qHM",
+      "titleOfPresentation": "Pending update...",
+      "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
+},
     {
       "id": "4",
       "name": "Ing. Marcelo Saldarriaga Carrillo",
       "title": "Gerente RunachayEcuador S.A.",
       "email": "marcelo.saldarriaga@runachay.com",
-      "image": "https://kislayverma.com/wp-content/uploads/2020/07/gopher-go.jpg",
-      "titleOfPresentation": "Introducción a la programación con Go",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "image": "https://media.licdn.com/dms/image/v2/C4E03AQH75ehIVsEx0A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650846697052?e=1762387200&v=beta&t=iKyZkwsij4VX0ECLfF3kXridCeHYllMmmISsoyIwIjQ",
+      "titleOfPresentation": "Pending update...",
+      "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
     },
     {
       "id": "5",
@@ -62,9 +62,9 @@
       "title": "Sitecore MVP | DXP Software Engineer | Marketing Data Analyst",
       "email": "mayra.olivo@example.com",
       "image": "https://media.licdn.com/dms/image/v2/D4D03AQGW2ugAQJIM6w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714673828314?e=1763596800&v=beta&t=Pl6v0GjN_tu2oiXLTK6DyGnF48B3S2D2gt9e43MHoiM",
-      "titleOfPresentation": "Plataformas de Experiencia Digital (DXP) y Análisis de Datos",
-      "description": "Software Engineer con más de 7 años de experiencia desarrollando soluciones backend en C# y .NET, integrando plataformas cloud como Azure y AWS. Especialista en DXP (Digital Experience Platforms), personalización basada en datos y soluciones integradas de marketing. Sitecore MVP 25-24-23 y fundadora de SUG Latam, promoviendo activamente la construcción de comunidades y el intercambio de conocimientos sobre tecnología, datos y experiencia digital."
-    }
+      "titleOfPresentation": "Pending update...",
+      "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
+  }
   ],
   "sponsors": [
     {
