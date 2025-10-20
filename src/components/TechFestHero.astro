@@ -23,6 +23,25 @@ const { event } = Astro.props;
         >
           NEW RELEASE
         </p>
+        <!-- Fechas principales del evento: Bootcamp y Hackathon (ubicadas debajo de NEW RELEASE y más vistosas) -->
+        <p class="mt-6 text-center">
+          {
+            (() => {
+              const boot = event.schedule?.find((s: any) => /bootcamp/i.test(s.event))?.date ||
+                (event.bootcamp?.details?.[0] || '').replace(/^Fecha:\s*/i, '');
+              const hack = event.schedule?.find((s: any) => /hackathon/i.test(s.event))?.date ||
+                (event.hackathon?.details?.[0] || '').replace(/^Fecha:\s*/i, '');
+              if (boot && hack) {
+                return (
+                  <span class="inline-block bg-accent/10 text-accent px-4 py-2 rounded-lg font-semibold text-lg md:text-xlc">
+                    Bootcamp: {boot} &middot; Hackathon: {hack}
+                  </span>
+                );
+              }
+              return boot || hack || null;
+            })()
+          }
+        </p>
       </header>
 
       <div class="mb-0 space-y-4">
