@@ -27,18 +27,37 @@ const { event } = Astro.props;
         <p class="mt-6 text-center">
           {
             (() => {
-              const boot = event.schedule?.find((s: any) => /bootcamp/i.test(s.event))?.date ||
-                (event.bootcamp?.details?.[0] || '').replace(/^Fecha:\s*/i, '');
-              const hack = event.schedule?.find((s: any) => /hackathon/i.test(s.event))?.date ||
-                (event.hackathon?.details?.[0] || '').replace(/^Fecha:\s*/i, '');
-              if (boot && hack) {
-                return (
-                  <span class="inline-block bg-accent/10 text-accent px-4 py-2 rounded-lg font-semibold text-lg md:text-xlc">
-                    Bootcamp: {boot} &middot; Hackathon: {hack}
-                  </span>
+              const boot =
+                event.schedule?.find((s: any) => /bootcamp/i.test(s.event))
+                  ?.date ||
+                (event.bootcamp?.details?.[0] || "").replace(/^Fecha:\s*/i, "");
+              const hack =
+                event.schedule?.find((s: any) => /hackathon/i.test(s.event))
+                  ?.date ||
+                (event.hackathon?.details?.[0] || "").replace(
+                  /^Fecha:\s*/i,
+                  ""
                 );
+              const posters =
+                event.schedule?.find((s: any) => /p[oó]ster/i.test(s.event))
+                  ?.date ||
+                (event.posters?.dates || "").replace(/^Fecha:\s*/i, "");
+
+              const segments = [
+                boot ? `Bootcamp: ${boot}` : null,
+                hack ? `Hackathon: ${hack}` : null,
+                posters ? `Pósteres: ${posters}` : null,
+              ].filter(Boolean);
+
+              if (segments.length === 0) {
+                return null;
               }
-              return boot || hack || null;
+
+              return (
+                <span class="inline-block bg-accent/10 text-accent px-4 py-2 rounded-lg font-semibold text-lg md:text-xlc">
+                  {segments.join(" · ")}
+                </span>
+              );
             })()
           }
         </p>
@@ -46,11 +65,13 @@ const { event } = Astro.props;
 
       <div class="mb-0 space-y-4">
         <div>
-          <p class="comment text-sm mb-1" data-i18n-key="hero.bootcampComment">// Más información del bootcamp</p>
+          <p class="comment text-sm mb-1" data-i18n-key="hero.bootcampComment">
+            // Más información del bootcamp
+          </p>
           <p>
-            <a 
-              href="/bootcamp" 
-              class="command-link" 
+            <a
+              href="/bootcamp"
+              class="command-link"
               data-i18n-key="hero.runBootcamp"
             >
               &gt; INICIAR /bootcamp()
@@ -58,14 +79,30 @@ const { event } = Astro.props;
           </p>
         </div>
         <div>
-          <p class="comment text-sm mb-1" data-i18n-key="hero.hackathonComment">// Conoce los detalles de la hackathon</p>
+          <p class="comment text-sm mb-1" data-i18n-key="hero.hackathonComment">
+            // Conoce los detalles de la hackathon
+          </p>
           <p>
-            <a 
-              href="/hackathon" 
-              class="command-link" 
+            <a
+              href="/hackathon"
+              class="command-link"
               data-i18n-key="hero.runHackathon"
             >
               &gt; INICIAR /hackathon()
+            </a>
+          </p>
+        </div>
+        <div>
+          <p class="comment text-sm mb-1" data-i18n-key="hero.postersComment">
+            // Explora la convocatoria de pósteres científicos
+          </p>
+          <p>
+            <a
+              href="/posters"
+              class="command-link"
+              data-i18n-key="hero.runPosters"
+            >
+              &gt; INICIAR /posters()
             </a>
           </p>
         </div>

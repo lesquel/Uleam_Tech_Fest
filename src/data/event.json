@@ -17,6 +17,11 @@
       "date": "7 Nov.",
       "event": "Hackathon",
       "description": "Hackathon Universitaria"
+    },
+    {
+      "date": "6-7 Nov.",
+      "event": "Pósteres Científicos",
+      "description": "Convocatoria de pósteres científicos del festival"
     }
   ],
   "speakers": [
@@ -28,7 +33,7 @@
       "image": "https://media.licdn.com/dms/image/v2/C5603AQHkeHsfIMpxJQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1565817432265?e=1762387200&v=beta&t=Z_akMaCJfWCuy2nsoNMbtxPjkOfC4Cj7F9cpLsAxv_Y",
       "titleOfPresentation": "Pending update...",
       "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
-},
+    },
     {
       "id": "2",
       "name": "Ing. Elizabeth Rodriguez Zambrano",
@@ -37,7 +42,7 @@
       "image": "https://media.licdn.com/dms/image/v2/D4D03AQEWjzhC95r66g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694198429781?e=1762387200&v=beta&t=EizROeasx-X8vOLtYbPfUZTxS3mqasecUjswdmfosio",
       "titleOfPresentation": "Pending update...",
       "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
-   },
+    },
     {
       "id": "3",
       "name": "Ing. Jose Mendoza Muñoz",
@@ -46,7 +51,7 @@
       "image": "https://media.licdn.com/dms/image/v2/C5603AQFDik0EQpLtiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516930829921?e=1762387200&v=beta&t=mxJkLuqSewKdMunJZX39OR7_oA5Pyt9RPCYpwj82qHM",
       "titleOfPresentation": "Pending update...",
       "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
-},
+    },
     {
       "id": "4",
       "name": "Ing. Marcelo Saldarriaga Carrillo",
@@ -64,7 +69,7 @@
       "image": "https://media.licdn.com/dms/image/v2/D4D03AQGW2ugAQJIM6w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714673828314?e=1763596800&v=beta&t=Pl6v0GjN_tu2oiXLTK6DyGnF48B3S2D2gt9e43MHoiM",
       "titleOfPresentation": "Pending update...",
       "description": "Los detalles de esta charla están en proceso de confirmación. Vuelve pronto para conocer el tema y contenido final."
-  }
+    }
   ],
   "sponsors": [
     {
@@ -112,5 +117,31 @@
     "description": "Equipos de estudiantes desarrollarán soluciones innovadoras a retos propuestos por empresas y la universidad.",
     "details": ["Fecha: 7 Nov.", "Formato: Presencial", "Duración: 24 horas"],
     "prizes": ["1er Lugar: pending", "2do Lugar: pending", "3er Lugar: pending"]
+  },
+  "posters": {
+    "title": "Convocatoria para Presentación de Pósteres Científicos",
+    "subtitle": "ULEAM TECH FEST 2025",
+    "dates": "6 y 7 de noviembre de 2025",
+    "intro": [
+      "Por medio del presente, se informa que los días 6 y 7 de noviembre de 2025 se llevará a cabo el ULEAM TECH FEST 2025, evento organizado por la Carrera de Software y el Club IA de la Universidad Laica Eloy Alfaro de Manabí (ULEAM), con el objetivo de fomentar el aprendizaje, la innovación y el desarrollo de habilidades tecnológicas entre los estudiantes universitarios de las carreras de Tecnologías de la Información y Software.",
+      "En el marco de este evento, se invita a la comunidad universitaria a participar en la presentación de pósteres científicos, orientados a compartir resultados de proyectos, investigaciones, propuestas de innovación o desarrollos tecnológicos realizados por estudiantes y docentes."
+    ],
+    "topics": [
+      "Inteligencia Artificial y Ciencia de Datos",
+      "Desarrollo Web y Móvil",
+      "Ciberseguridad y Redes",
+      "Ingeniería de Software y Metodologías Ágiles",
+      "Internet de las Cosas (IoT) y Robótica",
+      "Innovación tecnológica y emprendimiento"
+    ],
+    "requirements": [
+      "Los pósteres pueden ser presentados de forma individual o grupal (máximo 3 autores).",
+      "Cada póster debe reflejar un trabajo original relacionado con las áreas de tecnología o innovación.",
+      "El formato del póster debe tener tamaño A1 (vertical) y ser entregado en formato digital (PDF y PPT), incluir el logo de la ULEAM y de su organización (opcional).",
+      "Fecha límite de recepción: 31 de octubre de 2025.",
+      "Los pósteres seleccionados serán exhibidos durante el evento, recibirán un certificado de participación y serán publicados en un libro de resúmenes y pósteres con ISBN."
+    ],
+    "submission": "Enviar el póster y resumen (máximo 300 palabras) al correo electrónico: alex.santamaria@uleam.edu.ec indicando en el asunto \"Póster Científico ULEAM TECH FEST 2025\".",
+    "closing": "¡Participa y comparte tus ideas, proyectos e investigaciones que impulsan la innovación tecnológica en la ULEAM!"
   }
 }

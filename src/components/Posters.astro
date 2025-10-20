@@ -1,0 +1,82 @@
+---
+import HeaderInfo from "./HeaderInfo.astro";
+import TerminalBlock from "./TerminalBlock.astro";
+import { fade } from "astro:transitions";
+
+interface Props {
+  posters: any;
+  event: any;
+}
+
+const { posters, event } = Astro.props;
+---
+
+<div transition:animate={fade()} class="w-full max-w-2xl mx-auto">
+  <div class="bg-surface">
+    <div class="p-6 md:p-10">
+      <header class="text-center mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-primary">
+          {posters?.title}
+        </h1>
+        {
+          posters?.subtitle ? (
+            <p class="text-accent font-semibold mt-2">{posters.subtitle}</p>
+          ) : null
+        }
+      </header>
+
+      <section class="prose text-primary mb-4 space-y-4">
+        {posters?.intro?.map((paragraph: string) => <p>{paragraph}</p>)}
+
+        {
+          posters?.topics?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Temáticas sugeridas
+              </h3>
+              <ul>
+                {posters.topics.map((topic: string) => (
+                  <li>{topic}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          posters?.requirements?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Requisitos de participación
+              </h3>
+              <ul>
+                {posters.requirements.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          posters?.submission ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Envío de trabajos</h3>
+              <p>{posters.submission}</p>
+            </div>
+          ) : null
+        }
+
+        {
+          posters?.closing ? (
+            <p class="font-semibold text-accent">{posters.closing}</p>
+          ) : null
+        }
+      </section>
+
+      <footer class="mt-6 text-sm text-muted">
+        <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>
+      </footer>
+    </div>
+  </div>
+</div>
