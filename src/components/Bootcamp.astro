@@ -18,28 +18,36 @@ const { bootcamp, event } = Astro.props;
         <h1 class="text-3xl md:text-4xl font-bold text-primary">
           {bootcamp?.title}
         </h1>
-        {bootcamp?.subtitle ? (
-          <p class="text-accent font-semibold mt-2">{bootcamp.subtitle}</p>
-        ) : null}
+        {
+          bootcamp?.subtitle ? (
+            <p class="text-accent font-semibold mt-2">{bootcamp.subtitle}</p>
+          ) : null
+        }
       </header>
 
       <section class="prose text-primary mb-4">
         <p>{bootcamp?.description}</p>
-        {bootcamp?.details ? (
-          <div class="mt-4">
-            <h3 class="text-accent font-semibold mb-2">Detalles del evento</h3>
-            <ul>
-              {bootcamp.details.map((d: any) => (
-                <li>{d}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+        {
+          bootcamp?.details ? (
+            <div class="mt-4">
+              <h3 class="text-accent font-semibold mb-2">
+                Detalles del evento
+              </h3>
+              <ul>
+                {bootcamp.details.map((d: any) => (
+                  <li>{d}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
       </section>
 
       <div class="mb-4">
         <p>
-          <span class="command" data-i18n-key="speakers.label">&gt; speakers:</span>
+          <span class="command" data-i18n-key="speakers.label"
+            >&gt; speakers:</span
+          >
         </p>
         <div class="pl-4">
           <SpeakersList speakers={event.speakers} />
