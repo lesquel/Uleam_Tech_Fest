@@ -3,6 +3,18 @@ import { fade } from "astro:transitions";
 import CTA from "./CTA.astro";
 import TerminalBlock from "./TerminalBlock.astro";
 const { hackathon, event } = Astro.props;
+
+const summaryItems = hackathon?.summary
+  ? [
+      hackathon.summary.modality,
+      hackathon.summary.organizers,
+      hackathon.summary.collaborators,
+      hackathon.summary.objective,
+      hackathon.summary.theme,
+    ].filter(Boolean)
+  : [];
+
+const criteria = hackathon?.evaluation?.criteria ?? [];
 ---
 
 <div transition:animate={fade()} class="w-full max-w-2xl mx-auto">
@@ -19,17 +31,18 @@ const { hackathon, event } = Astro.props;
         }
       </header>
 
-      <section class="prose text-primary mb-4">
+      <section class="prose text-primary mb-6 space-y-4">
         <p>{hackathon?.description}</p>
+
         {
-          hackathon?.details ? (
-            <div class="mt-4">
+          summaryItems.length ? (
+            <div>
               <h3 class="text-accent font-semibold mb-2">
-                Detalles del evento
+                Información general
               </h3>
-              <ul>
-                {hackathon.details.map((d: any) => (
-                  <li>{d}</li>
+              <ul class="list-disc list-inside space-y-1">
+                {summaryItems.map((item: string) => (
+                  <li>{item}</li>
                 ))}
               </ul>
             </div>
@@ -37,12 +50,184 @@ const { hackathon, event } = Astro.props;
         }
 
         {
-          hackathon?.prizes ? (
-            <div class="mt-4">
-              <h3 class="text-accent font-semibold mb-2">Premios</h3>
-              <ul>
-                {hackathon.prizes.map((p: any) => (
-                  <li>{p}</li>
+          hackathon?.participants?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Participantes</h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.participants.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.timeline?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Desarrollo del evento
+              </h3>
+              <ul class="list-disc list-inside space-y-2">
+                {hackathon.timeline.map((stage: any) => (
+                  <li>
+                    <span class="font-semibold text-primary">
+                      {stage.title}:
+                    </span>{" "}
+                    {stage.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.deliverables?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Entregables finales
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.deliverables.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.tools ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Herramientas y tecnologías
+              </h3>
+              <p>{hackathon.tools}</p>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.rules?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Reglas generales</h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.rules.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.evaluation ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Evaluación</h3>
+              {hackathon.evaluation.notes ? (
+                <p class="mb-2">{hackathon.evaluation.notes}</p>
+              ) : null}
+              {criteria.length ? (
+                <ul class="list-disc list-inside space-y-1">
+                  {criteria.map((item: any) => (
+                    <li>
+                      <span class="font-semibold">{item.name}</span> (
+                      {item.weight}) – {item.description}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.awards?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Premios y reconocimientos
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.awards.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.challenges?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Retos del hackathon
+              </h3>
+              <ul class="list-disc list-inside space-y-2">
+                {hackathon.challenges.map((item: any) => (
+                  <li>
+                    <span class="font-semibold text-primary">
+                      {item.title}:
+                    </span>{" "}
+                    {item.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.guidelines?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">
+                Normas y consideraciones
+              </h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.guidelines.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.officialSite ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Sitio oficial</h3>
+              <a
+                href={hackathon.officialSite}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="command-link"
+              >
+                &gt; Abrir sitio oficial
+              </a>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.committee?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Comité organizador</h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.committee.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null
+        }
+
+        {
+          hackathon?.location?.length ? (
+            <div>
+              <h3 class="text-accent font-semibold mb-2">Ubicación</h3>
+              <ul class="list-disc list-inside space-y-1">
+                {hackathon.location.map((item: string) => (
+                  <li>{item}</li>
                 ))}
               </ul>
             </div>

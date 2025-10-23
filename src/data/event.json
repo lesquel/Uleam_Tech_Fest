@@ -120,9 +120,111 @@
   "hackathon": {
     "title": "Hackathon Universitaria",
     "subtitle": "Hora de poner en práctica lo aprendido, un día para crear, prototipar y competir.",
-    "description": "Equipos de estudiantes desarrollarán soluciones innovadoras a retos propuestos por empresas y la universidad.",
-    "details": ["Fecha: 7 Nov.", "Formato: Presencial", "Duración: 24 horas"],
-    "prizes": ["1er Lugar: pending", "2do Lugar: pending", "3er Lugar: pending"]
+    "description": "Equipos de estudiantes desarrollarán soluciones tecnológicas para retos reales de la comunidad ULEAM.",
+    "summary": {
+      "modality": "Modalidad: Presencial Campus ULEAM Matriz – Universidad Laica Eloy Alfaro de Manabí",
+      "organizers": "Organizan: Carrera de Software y Club de Inteligencia Artificial (IA)",
+      "collaborators": "Colaboran: Facultad de Ciencias de la Vida y Tecnologías, ZGames, Supabase, Cursor, Point Institute",
+      "objective": "Objetivo: Fomentar la creatividad, el trabajo colaborativo y el desarrollo de soluciones tecnológicas que respondan a necesidades reales de la comunidad utilizando inteligencia artificial y software libre.",
+      "theme": "Temática general: Soluciones tecnológicas innovadoras para la comunidad universitaria usando IA y software libre."
+    },
+    "participants": [
+      "Quiénes pueden participar: Estudiantes o egresados de universidades nacionales.",
+      "Modalidad: Trabajo en equipos.",
+      "Integrantes por equipo: De 2 a 3 estudiantes.",
+      "Inscripción: A través de la plataforma LUMA con correo institucional.",
+      "Cupo máximo: 20 participantes por reto (3 retos en total)."
+    ],
+    "timeline": [
+      {
+        "title": "Etapa 1 – Jueves 6 de noviembre, 14:00",
+        "description": "Presentación oficial del hackathon y descripción de los retos en el auditorio Leo Cedeño Sánchez del bloque FCVT-B16."
+      },
+      {
+        "title": "Etapa 2 – Viernes 7 de noviembre, 08:00 a 16:00",
+        "description": "Desarrollo de proyectos, presentaciones finales y premiación en los laboratorios de computación del bloque FCVT-B16."
+      }
+    ],
+    "deliverables": [
+      "Demo funcional del proyecto presentado.",
+      "Presentación tipo pitch de máximo 5 minutos."
+    ],
+    "tools": "Herramientas recomendadas: Supabase y Cursor (se permiten otras tecnologías libres o de código abierto; se valorará el uso ético de IA).",
+    "rules": [
+      "El proyecto debe desarrollarse durante el hackathon.",
+      "Se puede usar código abierto, librerías públicas y APIs como Supabase u OpenAI.",
+      "Debe presentarse un prototipo funcional o demo, no solo una idea.",
+      "Cada equipo debe entregar código fuente (GitHub o similar), demo funcional o deployment y presentación tipo pitch (5 minutos)."
+    ],
+    "evaluation": {
+      "notes": "Observación: los equipos deben demostrar el uso de Cursor durante la presentación.",
+      "criteria": [
+        {
+          "name": "Innovación y originalidad",
+          "description": "Novedad e impacto de la idea",
+          "weight": "25%"
+        },
+        {
+          "name": "Funcionalidad",
+          "description": "Prototipo funcionando técnicamente",
+          "weight": "25%"
+        },
+        {
+          "name": "Impacto y relevancia",
+          "description": "Aporte a la comunidad universitaria",
+          "weight": "20%"
+        },
+        {
+          "name": "Presentación y comunicación",
+          "description": "Claridad y efectividad del pitch",
+          "weight": "15%"
+        },
+        {
+          "name": "Diseño y UX",
+          "description": "Facilidad de uso, interfaz y experiencia",
+          "weight": "15%"
+        }
+      ]
+    },
+    "awards": [
+      "Primer lugar: Créditos de Cursor, créditos de Supabase, SWAG de sponsors, beca de inglés en Point Institute, certificado.",
+      "Segundo lugar: SWAG de sponsors y certificados.",
+      "Tercer lugar: SWAG de sponsors y certificados.",
+      "Entrega formal de premios: Viernes 7 de noviembre, 17:00 en el auditorio Leo Cedeño Sánchez del bloque FCVT-B16."
+    ],
+    "challenges": [
+      {
+        "title": "Reto 1: Sistema de Postulación para Prácticas Preprofesionales",
+        "description": "Plataforma que facilite la gestión, búsqueda y postulación de estudiantes a prácticas preprofesionales."
+      },
+      {
+        "title": "Reto 2: Sistema de Emisión de Microcredenciales Académicas",
+        "description": "Solución para generar, validar y consultar microcredenciales digitales para cursos, talleres o certificaciones."
+      },
+      {
+        "title": "Reto 3: Sistema de gestión para el Cine ULEAM",
+        "description": "Sistema integral que administre cartelera, funciones, reservas y control de asistencia del público universitario."
+      }
+    ],
+    "guidelines": [
+      "Los derechos del software pertenecen a los equipos y universidades participantes, con uso académico y de exhibición reconociendo a los autores.",
+      "Prohibido el plagio o uso no autorizado de código.",
+      "Uso ético de herramientas de IA.",
+      "Fomentar el respeto, trabajo colaborativo y puntualidad en todas las etapas.",
+      "Inscribirse mediante https://luma.com/iz19mnqn (plataforma LUMA)."
+    ],
+    "officialSite": "https://uleam-tech-fest.vercel.app/",
+    "committee": [
+      "Ing. Edgardo Panchana Flores – Director de la Carrera de Software",
+      "Ing. Alex Santamaría Philco, PhD. – Miembro de la comisión de investigación de FCVT",
+      "Ing. Andrés Cobeña Plama, Mg. – Docente FCVT",
+      "Ing. Israel Gómez Calderón, Mg. – Docente líder del Club de IA ULEAM"
+    ],
+    "location": [
+      "Universidad Laica Eloy Alfaro de Manabí",
+      "Av. Circunvalación, Manta, Ecuador",
+      "Bloque FCVT-B16"
+    ]
   },
   "posters": {
     "title": "Convocatoria para Presentación de Pósteres Científicos",
