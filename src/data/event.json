@@ -65,24 +65,12 @@
   "sponsors": [
     {
       "id": "1",
-      "name": "Cursor",
-      "image": "https://luismendoza.sfo2.cdn.digitaloceanspaces.com/blog/posts/cursor-linux/cursor.png",
-      "description": "Cursor: herramienta y comunidad para desarrolladores, enfocada en productividad y colaboración en entornos de desarrollo modernos."
-    },
-    {
-      "id": "2",
-      "name": "Supabase",
-      "image": "https://yt3.googleusercontent.com/KVjptxDSWT7rjVfGax2TgTNVAYgplgo1z_fwaV3MFjPpcmNVZC0TIgQV030BPJ0ybCP3_Fz-2w=s900-c-k-c0x00ffffff-no-rj",
-      "description": "Supabase: plataforma open-source para bases de datos y autenticación, que facilita construir aplicaciones escalables rápidamente."
-    },
-    {
-      "id": "3",
       "name": "ZGames",
       "image": "https://media.licdn.com/dms/image/v2/D4D0BAQGlL3K__sQPDw/company-logo_200_200/company-logo_200_200/0/1694616709541/zgameslatam_logo?e=1763596800&v=beta&t=2jfwUkqf9MA4Rrs1Wp2eQsjjSeRBe9d4r9LpBnCmwpg",
       "description": "ZGames: Nuestra innovadora plataforma ha sido meticulosamente desarrollada para simplificar y potenciar el éxito en el negocio de las apuestas deportivas. Brindamos todas las herramientas esenciales para el éxito de las apuestas deportivas."
     },
     {
-      "id": "4",
+      "id": "2",
       "name": "Point institute",
       "image": "https://pointinstituteweb.com/wp-content/uploads/2023/03/logo-png.png",
       "description": "Point Institute es un centro especializado en la enseñanza del inglés con certificación avalada por el Ministerio del Trabajo. Ofrece cursos flexibles, materiales Richmond y clases enfocadas en comunicación real."
@@ -149,7 +137,23 @@
       "Demo funcional del proyecto presentado.",
       "Presentación tipo pitch de máximo 5 minutos."
     ],
-    "tools": "Herramientas recomendadas: Supabase y Cursor (se permiten otras tecnologías libres o de código abierto; se valorará el uso ético de IA).",
+    "tools": {
+      "intro": "Herramientas oficiales del hackathon: supórtate en estas plataformas para construir tu solución (se permiten otras tecnologías libres o de código abierto). Se valorará el uso ético de IA.",
+      "items": [
+        {
+          "name": "Cursor",
+          "image": "https://luismendoza.sfo2.cdn.digitaloceanspaces.com/blog/posts/cursor-linux/cursor.png",
+          "description": "IDE con IA integrada que potencia el trabajo colaborativo y acelera el desarrollo de software.",
+          "link": "https://www.cursor.com/"
+        },
+        {
+          "name": "Supabase",
+          "image": "https://yt3.googleusercontent.com/KVjptxDSWT7rjVfGax2TgTNVAYgplgo1z_fwaV3MFjPpcmNVZC0TIgQV030BPJ0ybCP3_Fz-2w=s900-c-k-c0x00ffffff-no-rj",
+          "description": "Plataforma open-source que ofrece base de datos, autenticación y almacenamiento listos para producción.",
+          "link": "https://supabase.com/"
+        }
+      ]
+    },
     "rules": [
       "El proyecto debe desarrollarse durante el hackathon.",
       "Se puede usar código abierto, librerías públicas y APIs como Supabase u OpenAI.",

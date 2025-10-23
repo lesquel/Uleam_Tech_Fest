@@ -15,6 +15,9 @@ const summaryItems = hackathon?.summary
   : [];
 
 const criteria = hackathon?.evaluation?.criteria ?? [];
+const officialTools = Array.isArray(hackathon?.tools?.items)
+  ? hackathon.tools.items
+  : [];
 ---
 
 <div transition:animate={fade()} class="w-full max-w-2xl mx-auto">
