@@ -104,10 +104,35 @@ const officialTools = Array.isArray(hackathon?.tools?.items)
         {
           hackathon?.tools ? (
             <div>
-              <h3 class="text-accent font-semibold mb-2">
-                Herramientas y tecnologías
-              </h3>
-              <p>{hackathon.tools}</p>
+                <h3 class="text-accent font-semibold mb-2">Herramientas oficiales</h3>
+                {hackathon.tools.intro ? (
+                  <p class="mb-3">{hackathon.tools.intro}</p>
+                ) : null}
+                {officialTools.length ? (
+                  <div class="space-y-3">
+                    {officialTools.map((tool: any) => (
+                      <div class="flex items-start gap-4 p-4 rounded-lg border border-dashed border-accent/40 bg-surface/60">
+                        {tool.image ? (
+                          <img src={tool.image} alt={tool.name} class="w-16 h-16 object-contain" loading="lazy" />
+                        ) : null}
+                        <div>
+                          <p class="font-semibold text-primary text-lg">
+                            {tool.link ? (
+                              <a href={tool.link} target="_blank" rel="noopener noreferrer" class="command-link">
+                                &gt; {tool.name}
+                              </a>
+                            ) : (
+                              tool.name
+                            )}
+                          </p>
+                          {tool.description ? (
+                            <p class="text-sm text-muted mt-1">{tool.description}</p>
+                          ) : null}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
             </div>
           ) : null
         }
