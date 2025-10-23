@@ -1,6 +1,6 @@
 ---
 import { fade } from "astro:transitions";
-import HeaderInfo from "./HeaderInfo.astro";
+import CTA from "./CTA.astro";
 import TerminalBlock from "./TerminalBlock.astro";
 const { hackathon, event } = Astro.props;
 ---
@@ -54,6 +54,8 @@ const { hackathon, event } = Astro.props;
       <main>
         <TerminalBlock event={event} />
       </main>
+
+      <CTA cta={event.ctas?.hackathon ?? event.cta} />
 
       <footer class="mt-6 text-sm text-muted">
         <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>

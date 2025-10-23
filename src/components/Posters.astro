@@ -1,4 +1,5 @@
 ---
+import CTA from "./CTA.astro";
 import HeaderInfo from "./HeaderInfo.astro";
 import TerminalBlock from "./TerminalBlock.astro";
 import { fade } from "astro:transitions";
@@ -73,6 +74,8 @@ const { posters, event } = Astro.props;
           ) : null
         }
       </section>
+
+      <CTA cta={event.ctas?.posters ?? event.cta} />
 
       <footer class="mt-6 text-sm text-muted">
         <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>

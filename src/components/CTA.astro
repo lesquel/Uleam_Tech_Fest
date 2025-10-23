@@ -1,5 +1,8 @@
 ---
 const { cta } = Astro.props;
+const labelKey = cta.i18nKey ?? null;
+const subtextKey = cta.subtextKey ?? "cta.subtext";
+const subtextText = cta.subtext ?? "// ¡Esperamos tu participación!";
 ---
 
 <section class="text-center mt-10">
@@ -9,9 +12,9 @@ const { cta } = Astro.props;
     rel="noopener noreferrer"
     class="inline-block bg-accent text-accent-contrast font-bold py-3 px-8 rounded-lg text-lg hover:opacity-95 transition-colors duration-300 shadow-lg"
   >
-    <span data-i18n-key="cta.join">{cta.text}</span>
+  <span data-i18n-key={labelKey ?? undefined}>{cta.text}</span>
   </a>
-  <p class="comment mt-3 text-sm" data-i18n-key="cta.subtext">
-    // ¡Esperamos tu participación!
+  <p class="comment mt-3 text-sm" data-i18n-key={subtextKey}>
+    {subtextText}
   </p>
 </section>

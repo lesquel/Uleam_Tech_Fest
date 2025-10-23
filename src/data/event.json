@@ -99,7 +99,22 @@
   ],
   "cta": {
     "text": "Inscríbete Ahora",
-    "href": "https://luma.com/51i82pkw"
+    "href": "https://luma.com/51i82pkw",
+    "i18nKey": "cta.join"
+  },
+  "ctas": {
+    "bootcamp": {
+      "text": "Inscríbete al Bootcamp",
+      "href": "https://luma.com/51i82pkw"
+    },
+    "hackathon": {
+      "text": "Inscríbete al Hackathon",
+      "href": "https://luma.com/iz19mnqn"
+    },
+    "posters": {
+      "text": "Inscríbete a Pósteres Científicos",
+      "href": "https://luma.com/51i82pkw"
+    }
   },
   "bootcamp": {
     "title": "Bootcamp: Todo lo necesario para el Desarrollo",
