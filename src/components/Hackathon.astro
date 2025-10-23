@@ -34,6 +34,7 @@ const criteria = hackathon?.evaluation?.criteria ?? [];
       <section class="prose text-primary mb-6 space-y-4">
         <p>{hackathon?.description}</p>
 
+        <CTA cta={event.ctas?.hackathon ?? event.cta} />
         {
           summaryItems.length ? (
             <div>
@@ -238,8 +239,6 @@ const criteria = hackathon?.evaluation?.criteria ?? [];
       <main>
         <TerminalBlock event={event} />
       </main>
-
-      <CTA cta={event.ctas?.hackathon ?? event.cta} />
 
       <footer class="mt-6 text-sm text-muted">
         <a href="/" class="text-accent" data-i18n-key="back">← Volver</a>
