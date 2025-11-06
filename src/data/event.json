@@ -199,15 +199,35 @@
     "challenges": [
       {
         "title": "Reto 1: Sistema de Postulación para Prácticas Preprofesionales",
-        "description": "Plataforma que facilite la gestión, búsqueda y postulación de estudiantes a prácticas preprofesionales."
+        "description": "Plataforma que facilite la gestión, búsqueda y postulación de estudiantes o egresados a prácticas preprofesionales dentro o fuera de la universidad.",
+        "requirements": [
+          "Módulo de autenticación básico (registro y login con correo electrónico, sin dominio institucional obligatorio).",
+          "Gestión de ofertas de prácticas (CRUD: empresa, área, duración, modalidad, requisitos).",
+          "Postulación de usuarios con datos personales.",
+          "Listado de prácticas disponibles con filtros (área, modalidad, ubicación).",
+          "Panel de administrador para revisar y aprobar postulaciones."
+        ]
       },
       {
         "title": "Reto 2: Sistema de Emisión de Microcredenciales Académicas",
-        "description": "Solución para generar, validar y consultar microcredenciales digitales para cursos, talleres o certificaciones."
+        "description": "Generar, validar y consultar microcredenciales digitales verificables para cursos, talleres o certificaciones.",
+        "requirements": [
+          "Módulo de creación de cursos/talleres.",
+          "Registro de participantes y emisión de microcredenciales.",
+          "Generación de credencial con identificador único o código QR.",
+          "Página de validación pública por código.",
+          "Listado de credenciales emitidas."
+        ]
       },
       {
         "title": "Reto 3: Sistema de gestión para el Cine ULEAM",
-        "description": "Sistema integral que administre cartelera, funciones, reservas y control de asistencia del público universitario."
+        "description": "Administrar la cartelera, funciones, reservas y control de asistencia del público universitario.",
+        "requirements": [
+          "Gestión de películas y funciones (CRUD).",
+          "Sistema de reservas con identificación por usuario.",
+          "Control de asistencia mediante validación de QR.",
+          "Dashboard básico con estadísticas de ocupación."
+        ]
       }
     ],
     "guidelines": [

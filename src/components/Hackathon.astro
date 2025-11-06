@@ -189,13 +189,28 @@ const officialTools = Array.isArray(hackathon?.tools?.items)
               <h3 class="text-accent font-semibold mb-2">
                 Retos del hackathon
               </h3>
-              <ul class="list-disc list-inside space-y-2">
+              <ul class="list-disc list-inside space-y-4">
                 {hackathon.challenges.map((item: any) => (
                   <li>
-                    <span class="font-semibold text-primary">
-                      {item.title}:
-                    </span>{" "}
-                    {item.description}
+                    <div>
+                      <p class="font-semibold text-primary mb-1">
+                        {item.title}
+                      </p>
+                      <p class="mb-2">{item.description}</p>
+
+                      {item.requirements && item.requirements.length ? (
+                        <div class="ml-4">
+                          <p class="font-semibold text-accent mb-1">
+                            Requerimientos mínimos
+                          </p>
+                          <ul class="list-disc list-inside space-y-1">
+                            {item.requirements.map((req: string) => (
+                              <li>{req}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null}
+                    </div>
                   </li>
                 ))}
               </ul>
